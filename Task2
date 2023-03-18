@@ -1,1 +1,73 @@
 
+
+import java.util.;
+
+public class numbergusing{
+	
+	static  ArrayListInteger arr= new ArrayList();
+	public static void main(String[] args) {
+	numbergusing me = new numbergusing();
+	Scanner sc = new Scanner(System.in);
+	int guessno;
+		int guess = 0;
+	while(guess!=5){
+	 System.out.println(1 Playn2Scoren3 Exit);
+	
+	System.out.print(Enter the choice );
+	int choice = sc.nextInt();
+		 switch (choice) {
+		case 1
+		System.out.print(ntake a range );
+		int range = sc.nextInt();
+		Random random = new Random();
+		int rno = random.nextInt(range) + 1;
+		
+		System.out.println(You have guess limit of 4);
+		
+		do { 
+		System.out.print(You use +guess+tOut of 4);
+		System.out.print(nEnter your guess number );
+		guessno = sc.nextInt();
+		guess++;
+		if (guessno  rno)  
+		{
+		System.out.println(nLower than this);
+		} 
+		else if (guessno  rno) 
+		{
+		System.out.println(nHigher than this);
+		}
+		if(guess==5)
+		{ System.out.println(YOU EXCEED THE MAXIMUM LIMIT........nRESTARTING GAME.............);
+		System.exit(0);
+		}
+		}while (rno!= guessno);
+		System.out.println( );
+		 System.out.println(You got answered in + guess +  try!);
+		 arr.add(guess);
+		
+		System.out.println( );
+							 
+		break;
+		case 2
+								
+		System.out.println(Score );
+		System.out.println(Your fastest games today out of all tries is  +n);
+		Collections.sort(arr);
+		for (Integer scores  arr) {
+		System.out.println(Finished the number game in  + scores +  tries);
+		}
+		System.out.println( );
+						      
+		    break;
+		case 3
+		  System.out.println(n+GOOD BYE);
+		 System.exit(1);
+		break;
+		default System.out.println(n+INVALID INPUT);
+		    }
+		   
+	   }
+	  
+	}
+}
